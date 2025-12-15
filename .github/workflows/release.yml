@@ -6,11 +6,11 @@ on:
       sukisu_branch:
         description: 'SukiSU Branch'
         required: true
-        default: 'Stable(标准)'
+        default: 'Dev'
         type: choice
         options:
-          - Stable(标准)
-          - Dev(开发)
+          - Dev
+          - Stable
       enable_susfs:
         description: 'Enable SUSFS'
         required: true
