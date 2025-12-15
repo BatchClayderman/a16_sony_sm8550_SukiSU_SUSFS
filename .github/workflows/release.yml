@@ -29,7 +29,7 @@ on:
       release_version:
         description: 'Release Version'
         required: true
-        default: "OP13-A16-$(date +'%Y%m%d.%H%M%S.%N')"
+        default: 'OP13-A16-$(date +'%Y%m%d.%H%M%S.%N')'
         type: string
 
 env:
