@@ -37,7 +37,7 @@ env:
   AOSP_CLANG_VERSION: r522817
   KERNEL_LOCALVERSION: spacealtctrl-sukisu
   ANDROID_VERSION: android16
-  KERNEL_VERSION: 6.66
+  KERNEL_VERSION: 6.6
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
     timeout-minutes: 120
     strategy:
       matrix:
-        device: [pdx234, pdx237]
+        device: [cph2653, pzj110]
       fail-fast: false
     steps:
       - name: Maximize Build Space
