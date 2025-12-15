@@ -29,7 +29,7 @@ on:
       release_version:
         description: 'Release Version'
         required: true
-        default: 'OP13-A16-$(date +'%Y%m%d.%H%M%S.%N')'
+        default: 'OP13-A16-DEFAULT'
         type: string
 
 env:
@@ -50,6 +50,10 @@ jobs:
         device: [cph2653, pzj110]
       fail-fast: false
     steps:
+      - name: Generate release version
+        run: |
+          echo "RELEASE_VERSION=OP13-A16-$(date +'%Y%m%d.%H%M%S.%N')" >> $GITHUB_ENV
+          echo "Release Version is $RELEASE_VERSION"
       - name: Maximize Build Space
         uses: AdityaGarg8/remove-unwanted-software@v5
         with:
